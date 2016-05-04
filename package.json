@@ -1,0 +1,15 @@
+{
+  "name": "zajats",
+  "version": "1.0.0",
+  "description": "small chartjs test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chartjs": "^0.3.23",
+    "xlsx": "^0.8.0"
+  }
+}

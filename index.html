@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Графики</title>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="bower_components/Chart.js/dist/Chart.min.js"></script>
+	<script type="text/javascript" src="bower_components/js-xlsx/dist/xlsx.min.js"></script>
+</head>
+<body>
+	<input type="file" style="display: none" id="inputField" />
+	<canvas id = "amplSpectr" width="600px" height = "600px"></canvas>
+</body>
+<script type="text/javascript">
+
+		// function setInput(data){
+		// 	var excelParser = XLSX;
+		// 	var inputFile = excelParser.read(data, {type: "binary"});
+
+		// 	var worksheet = inputFile.Sheets["Лист1"];
+
+		// 	var finishRow = 2404,
+		// 		startRow = 4;
+
+		// 	var inputMapper = {
+		// 		"Ampl spektr zond signala":{
+		// 			"20": "A",
+		// 			"30": "B",
+		// 			"40": "C",
+		// 			"50": "D",
+		// 			"60": "E",
+		// 			"80": "F",
+		// 			"100": "G"
+		// 		},
+		// 		"Fazov spektr zond signala":{
+		// 			"20": "H",
+		// 			"30": "I",
+		// 			"40": "J",
+		// 			"50": "K",
+		// 			"60": "L",
+		// 			"80": "M",
+		// 			"100": "N"
+		// 		}
+		// 	}
+
+		// 	var result = {
+		// 		getColumnValues: function(columnHeader){
+		// 			var res = [];
+		// 			for(var i = startRow; i < finishRow; i++){
+		// 				res.push(worksheet[columnHeader + i].v);
+		// 			}
+		// 			return res;
+		// 		},
+		// 		getAmplSpektr: function(number){
+		// 			return this.getColumnValues(inputMapper["Ampl spektr zond signala"][number]);
+		// 		},
+		// 		getFazSpektr: function(number){
+		// 			return this.getColumnValues(inputMapper["Fazov spektr zond signala"][number]);
+
+		// 		}
+		// 	}
+
+		// 	return result;
+		// }
+
+		// var reader = new FileReader();
+		// reader.onload = function(e){
+		// 	var inputProvider = setInput(e.target.result);
+		// 	var zz = inputProvider.getAmplSpektr(20);
+		// 	console.log(zz.length);
+		// }
+		// var blobBuilder = new Blob();
+		// blobBuilder.type= "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+		// blobBuilder.name = "inputModule/input.xlsx";
+		// var f = {};
+		// f.name = "inputModule/input.xlsx";
+		// reader.readAsBinaryString(blobBuilder);
+
+		var labels = [];
+		for(var i = 1; i < 2400; i++){
+			labels.push(i);
+		}
+
+</script>
+</html>
